@@ -1,17 +1,28 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item">  
-      <a routerLink="product/create" class="nav-link" routerLinkActive="active">  
-        Create Product  
-      </a>  
-    </li>  
-    <li class="nav-item">  
-      <a routerLink="products" class="nav-link" routerLinkActive="active">  
-        Products  
-      </a>  
-    </li>  
-  </ul>
-</nav> 
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Product</a>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+          <li class="nav-item">  
+              <a routerLink="product/create" class="nav-link" routerLinkActive="active">  
+                Create Product  
+              </a>  
+            </li>  
+            <li class="nav-item">  
+              <a routerLink="products" class="nav-link" routerLinkActive="active">  
+                View Products  
+              </a>  
+            </li> 
+      </ul>
+    </div>
+  </nav>
 
 <div class="container-fluid">  
   <router-outlet></router-outlet>  
