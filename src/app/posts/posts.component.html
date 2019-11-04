@@ -1,0 +1,11 @@
+<p>product posts works!</p>
+<ul class="list-group">  
+        <li  
+          *ngFor="let post of posts"   
+          class="list-group-item">  
+          <b>Title: </b> {{ post.title }} 
+          <ul style="list-style-type: none;">
+              <li><b>Content: </b> {{ post.body }} </li>
+          </ul> 
+        </li>  
+      </ul> 
