@@ -8,6 +8,7 @@ import { PostService } from '../post.service';
   providers: [PostService],
 })
 export class PostsComponent implements OnInit {
+  config: any;
   posts: any[];
   // private url = 'https://jsonplaceholder.typicode.com/posts';
   // tslint:disable-next-line: deprecation
@@ -20,8 +21,15 @@ export class PostsComponent implements OnInit {
     //   this.posts = response.json();
     //   console.log(this.posts);
     // });
+    this.config = {
+      itemsPerPage: 10,
+      currentPage: 1,
+      totalItems: this.posts
+    };
   }
-
+  pageChanged(event) {
+    this.config.currentPage = event;
+  }
   ngOnInit() {
     // this.http.get(this.url).subscribe((response: any) => {
     //   this.posts = response.json();
@@ -29,12 +37,13 @@ export class PostsComponent implements OnInit {
     // });
 
 
-    /*Using Service ( Seperation of concerns )*/
+    /*Using Service Seperation of concerns*/
     this.service.getPosts().
     subscribe((response: any) => {
       this.posts = response.json();
       console.log(this.posts);
     });
+  
   }
 }
 
