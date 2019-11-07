@@ -43,7 +43,6 @@ export class PostsComponent implements OnInit {
       this.posts = response.json();
       console.log(this.posts);
     });
-  
   }
 }
 
