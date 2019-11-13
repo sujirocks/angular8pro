@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
-
+import { User } from './users';
 @Component({
   selector: 'app-product-add',
   templateUrl: './product-add.component.html',
