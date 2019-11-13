@@ -12,8 +12,6 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { PostsComponent } from './posts/posts.component';
 import { FilterPipe } from './filter.pipe';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

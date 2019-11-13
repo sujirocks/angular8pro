@@ -1,4 +1,4 @@
 export interface User {
-    userName: string;  
-    skillsSets: string[];  
+    userName: string;
+    skillsSets: string[];
 }
