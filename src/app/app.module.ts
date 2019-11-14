@@ -11,6 +11,7 @@ import { ProductGetComponent } from './product-get/product-get.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { PostsComponent } from './posts/posts.component';
 import { FilterPipe } from './filter.pipe';
+import { CustomTextComponent } from './custom-text/custom-text.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FilterPipe } from './filter.pipe';
     ProductGetComponent,
     ProductEditComponent,
     PostsComponent,
-    FilterPipe
+    FilterPipe,
+    CustomTextComponent
   ],
   imports: [
     BrowserModule,

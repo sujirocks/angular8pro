@@ -1,0 +1,10 @@
+<!-- <p class="badge badge-pill badge-success">custom-text works!</p> -->
+    <div>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter details" (keypress)="numberOnly($event)" [(ngModel)]="inputModel"
+            (ngModelChange)="textChange()" [maxlength]="maxLength">
+        <small id="emailHelp" class="form-text text-danger">Total Characters : {{textCount}} /
+            {{totalCharLengthText}}</small>
+    </div>
+ 
+  

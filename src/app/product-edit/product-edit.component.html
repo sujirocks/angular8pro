@@ -1,1 +1,15 @@
-<p class="badge badge-pill badge-success">Product-edit works!</p>
+<p class="badge badge-pill badge-success">Create custom Textbox in Angular 8 with Input & Output Decorators!</p>
+<div class="card w-25">
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+              <!-- <label for="exampleInputEmail1">Total Characters : {{textCount}}</label>
+              <label for="exampleInputEmail1">Total Characters : {{totalCharLengthText}} </label> -->
+              <label for="exampleInputEmail1">Email :</label>
+              <app-custom-text [(inputModel)]="data1" [maxLength]="0"></app-custom-text>
+              <label for="exampleInputEmail1">Contact :</label>
+              <app-custom-text [(inputModel)]="data2" [maxLength]="10" [isNumeric]="true"></app-custom-text>
+            </div>
+          </form>
+    </div>
+  </div>

@@ -14,7 +14,7 @@ const routes: Routes = [
     component: PostsComponent
   },
   {
-    path: 'edit/:id',
+    path: 'products/edit',
     component: ProductEditComponent
   },
   {
