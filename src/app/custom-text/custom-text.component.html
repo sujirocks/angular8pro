@@ -3,8 +3,9 @@
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             placeholder="Enter details" (keypress)="numberOnly($event)" [(ngModel)]="inputModel"
             (ngModelChange)="textChange()" [maxlength]="maxLength">
-        <small id="emailHelp" class="form-text text-danger">Total Characters : {{textCount}} /
-            {{totalCharLengthText}}</small>
+        <small id="emailHelp" class="form-text text-danger">
+            Total Characters : {{textCount}} / {{totalCharLengthText}} <br>
+            Type Characters : {{inputModel}}</small>
     </div>
  
   
