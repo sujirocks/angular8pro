@@ -8,20 +8,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductGetComponent } from './product-get/product-get.component';
-import { ProductEditComponent } from './product-edit/product-edit.component';
+// import { ProductEditComponent } from './product-edit/product-edit.component';
 import { PostsComponent } from './posts/posts.component';
 import { FilterPipe } from './filter.pipe';
-import { CustomTextComponent } from './custom-text/custom-text.component';
-
+// import { CustomTextComponent } from './custom-text/custom-text.component';
+import {CustomRoutingModule} from './custom-text/custom-routing.module'
 @NgModule({
   declarations: [
     AppComponent,
     ProductAddComponent,
     ProductGetComponent,
-    ProductEditComponent,
+    // ProductEditComponent,
     PostsComponent,
     FilterPipe,
-    CustomTextComponent
+    // CustomTextComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,8 @@ import { CustomTextComponent } from './custom-text/custom-text.component';
     AppRoutingModule,
     NgxPaginationModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CustomRoutingModule
   ],
 
   bootstrap: [AppComponent]

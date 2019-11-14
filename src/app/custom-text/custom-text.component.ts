@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CustomTextComponent implements OnInit {
 
   constructor() { }
-  @Input() inputModel: string;
+  @Input() inputModel: any;
   @Input() maxLength: number;
   @Input() isNumeric: boolean;
 
@@ -16,9 +16,8 @@ export class CustomTextComponent implements OnInit {
   totalCharLengthText: string;
   textCount: number;
   ngOnInit() {
-    this.textCount = this.inputModel.length;
-    // tslint:disable-next-line: triple-equals
-    this.totalCharLengthText = (this.maxLength == 0 ) ? 'Unlimited' : (this.maxLength).toString();
+    this.textCount = this.inputModel.toString().length;
+    this.totalCharLengthText = (this.maxLength === 0 ) ? 'Unlimited' : (this.maxLength).toString();
   }
   textChange() {
     this.inputModelChange.emit(this.inputModel);

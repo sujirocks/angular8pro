@@ -6,11 +6,15 @@ import {ProductGetComponent} from './product-get/product-get.component';
 import {PostsComponent} from './posts/posts.component';
 const routes: Routes = [
   {
-    path: 'product/create',
+    path: 'products/custom',
+    loadChildren: () => import('./custom-text/custom-routing.module').then(m => m.CustomRoutingModule)
+  },
+  {
+    path: 'products/create',
     component: ProductAddComponent
   },
   {
-    path: 'product/posts',
+    path: 'products/posts',
     component: PostsComponent
   },
   {
