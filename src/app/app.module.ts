@@ -12,7 +12,7 @@ import { ProductGetComponent } from './product-get/product-get.component';
 import { PostsComponent } from './posts/posts.component';
 import { FilterPipe } from './filter.pipe';
 // import { CustomTextComponent } from './custom-text/custom-text.component';
-import {CustomRoutingModule} from './custom-text/custom-routing.module'
+import {CustomRoutingModule} from './custom-text/custom-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
