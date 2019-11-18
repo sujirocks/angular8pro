@@ -1,12 +1,20 @@
 <p class="badge badge-pill badge-success">Product-tab works!</p>
- <div class="clearfix button-bar">
+ <div class="clearfix button-bar filters">
       <div class="float-left">
           <h4>Listing of Posts</h4>
-          
       </div>
       <div class="float-right">
             <button class="btn btn-primary btn-sm float-right" (click)="autoSizeAll()">Auto-Size All</button>
             <button class="btn btn-primary btn-sm mr-2 float-right" (click)="sizeToFit()">Size to Fit</button>
+            <label class="align-text-top">Show :&nbsp;</label>
+          <select (change)="onPageSizeChanged()" id="page-size" class="mr-1 align-middle">
+            <option value="10" >10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100" selected="">100</option>
+          </select>
+          <label class="align-text-top mr-2">entries</label>
       </div>
   </div>
   <div class="outer-div">

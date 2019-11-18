@@ -30,7 +30,10 @@ autoSizeAll() {
   });
   this.gridColumnApi.autoSizeColumns(allColumnIds);
 }
-  ngOnInit() {
+  onPageSizeChanged(newPageSize) {
+    const e = (document.getElementById('page-size')) as HTMLSelectElement;
+    const dropval = e.value;
+    this.gridApi.paginationSetPageSize(Number(dropval));
   }
   onGridReady(params) {
     this.gridApi = params.api;
@@ -42,5 +45,7 @@ autoSizeAll() {
         this.rowData = data;
         this.sizeToFit();
       });
+  }
+  ngOnInit() {
   }
 }

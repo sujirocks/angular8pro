@@ -5,12 +5,15 @@
    display: flex;
    flex-direction: column;
 }
+.filters label{
+   font-size:14px;
+}
 
 .button-bar {
    padding-bottom: 4px;
 }
 
-.grid-wrapper {
+.grid-wrapper, #page-size {
    height: 30px;
    flex: 1;
 }
