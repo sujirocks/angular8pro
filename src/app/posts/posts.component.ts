@@ -52,7 +52,7 @@ export class PostsComponent implements OnInit {
     /*Using Service Seperation of concerns*/
     this.service.getPosts().
     subscribe((response: any) => {
-      this.posts = response.json();
+      this.posts = response;
       this.loading = false;
       console.log(this.posts);
     });

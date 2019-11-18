@@ -1,0 +1,24 @@
+<p class="badge badge-pill badge-success">Product-tab works!</p>
+ <div class="clearfix button-bar">
+      <div class="float-left">
+          <h4>Listing of Posts</h4>
+          
+      </div>
+      <div class="float-right">
+            <button class="btn btn-primary btn-sm float-right" (click)="autoSizeAll()">Auto-Size All</button>
+            <button class="btn btn-primary btn-sm mr-2 float-right" (click)="sizeToFit()">Size to Fit</button>
+      </div>
+  </div>
+  <div class="outer-div">
+<ag-grid-angular 
+    style="width: 100%; height: 800px;" 
+    class="ag-theme-blue"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [pagination]="true"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)">
+</ag-grid-angular>
+</div>
+

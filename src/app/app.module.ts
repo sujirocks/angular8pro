@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,6 +13,8 @@ import { PostsComponent } from './posts/posts.component';
 import { FilterPipe } from './filter.pipe';
 // import { CustomTextComponent } from './custom-text/custom-text.component';
 import {CustomRoutingModule} from './custom-text/custom-routing.module';
+import { ProductTabComponent } from './product-tab/product-tab.component';
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,17 +23,19 @@ import {CustomRoutingModule} from './custom-text/custom-routing.module';
     // ProductEditComponent,
     PostsComponent,
     FilterPipe,
+    ProductTabComponent,
     // CustomTextComponent
   ],
   imports: [
     BrowserModule,
     // tslint:disable-next-line: deprecation
-    HttpModule,
     AppRoutingModule,
     NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
-    CustomRoutingModule
+    CustomRoutingModule,
+    HttpClientModule,
+    AgGridModule.withComponents(null)
   ],
 
   bootstrap: [AppComponent]
