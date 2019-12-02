@@ -5,6 +5,7 @@ import {ProductEditComponent} from './product-edit/product-edit.component';
 import {ProductGetComponent} from './product-get/product-get.component';
 import { ProductTabComponent } from './product-tab/product-tab.component';
 import {PostsComponent} from './posts/posts.component';
+import { NameEditorComponent } from './name-editor/name-editor.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'products/tab',
     component: ProductTabComponent
+  },
+  {
+    path: 'products/editor',
+    component: NameEditorComponent
   },
   {
     path: 'products',

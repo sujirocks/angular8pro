@@ -10,6 +10,11 @@
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="products/editor" class="nav-link" routerLinkActive="active">
+              Simple Form
+            </a>
+          </li>
       <li class="nav-item">
         <a routerLink="products/create" class="nav-link" routerLinkActive="active">
           Create Product
@@ -35,12 +40,12 @@
           Tabular Posts
         </a>
       </li>
-
     </ul>
   </div>
 </nav>
 
 <div class="container-fluid">
-
+  <!-- <app-name-editor></app-name-editor> -->
   <router-outlet></router-outlet>
+ 
 </div>

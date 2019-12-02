@@ -1,0 +1,38 @@
+<p class="badge badge-pill badge-success">Simple form with reactive forms!</p>
+<form [formGroup]="setForm" (ngSubmit)="onSubmit()">
+<div class="form-group">
+  <label for="usr">First Name:</label>
+  <input type="text" class="form-control" id="usr" formControlName='firstName' required>
+</div>
+<div class="form-group">
+  <label for="usr">Last Name:</label>
+  <input type="text" class="form-control" id="usr" formControlName='lastName' required>
+</div>
+
+
+<div formGroupName="address">
+    <fieldset>
+        <legend>Personalia:</legend>
+    <div class="form-group">
+        <label for="usr">Area:</label>
+        <input type="text" class="form-control" id="usr" formControlName='area' required>
+      </div>
+      <div class="form-group">
+          <label for="usr">City:</label>
+          <input type="text" class="form-control" id="usr" formControlName='area' required>
+        </div>
+        <div class="form-group">
+            <label for="usr">State:</label>
+            <input type="text" class="form-control" id="usr" formControlName='state' required>
+          </div>
+          <div class="form-group">
+              <label for="usr">Zip:</label>
+              <input type="text" class="form-control" id="usr" formControlName='zip' required>
+            </div>
+    </fieldset>
+</div>
+<div class="form-group clearfix">
+    <button type="submit" class="btn btn-primary float-right" [disabled]="!this.setForm.valid">Submit</button>
+  </div>
+
+</form>

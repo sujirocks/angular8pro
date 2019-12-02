@@ -1,5 +1,13 @@
 @import 'ag-grid-community/dist/styles/ag-grid.css';
 @import 'ag-grid-community/dist/styles/ag-theme-blue.css';
+@import '~ngx-toastr/toastr.css'; 
+.toast-container {
+   pointer-events: none;
+   position: absolute !important;
+   z-index: 999999;
+   right: 0 !important;
+   top: 0 !important;
+}
 .outer-div {
    width: 100%;
    display: flex;

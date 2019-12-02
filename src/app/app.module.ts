@@ -15,6 +15,9 @@ import { FilterPipe } from './filter.pipe';
 import {CustomRoutingModule} from './custom-text/custom-routing.module';
 import { ProductTabComponent } from './product-tab/product-tab.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,7 @@ import { AgGridModule } from 'ag-grid-angular';
     PostsComponent,
     FilterPipe,
     ProductTabComponent,
+    NameEditorComponent,
     // CustomTextComponent
   ],
   imports: [
@@ -35,9 +39,12 @@ import { AgGridModule } from 'ag-grid-angular';
     ReactiveFormsModule,
     CustomRoutingModule,
     HttpClientModule,
-    AgGridModule.withComponents(null)
-  ],
-
+    AgGridModule.withComponents(null),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'top-right',
+        closeButton: true,
+    } )],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
